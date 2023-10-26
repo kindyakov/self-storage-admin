@@ -6,12 +6,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231026163842" />
-	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231026163842">
-	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231026163842">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231026163842">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231026205746" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231026205746">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231026205746">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231026205746">
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231026163842"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231026205746"></script>
 </head>
 
 <body>
@@ -2065,17 +2065,109 @@
 
       <div class="modal__bottom">
         <div class="modal__tabs">
-          <button class="modal__tab _rooms-financial-information-tabs-btn btn-circle button">287</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231026163842"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231026163842"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20231026163842"></script>
-<script src="assets/libs/simplebar/simplebar.min.js?_v=20231026163842"></script>
-<script src="js/app.min.js?_v=20231026163842"></script>
+
+<div class="modal modal-payments-under-agreements">
+  <div class="modal__content">
+    <div class="modal__body" data-tabs-init="modal-payments-under-agreements-tabs">
+      <div class="modal__top">
+        <button class="btn-circle btn-agreement-data button btn-modal-close">
+          <svg class='icon arrow'>
+            <use xlink:href='img/svg/sprite.svg#arrow'></use>
+          </svg>
+        </button>
+        <h4 class="modal__title">Платежи по договору</h4>
+        <div class="container-data__block-content">
+          <span class="container-data__block-data">Последний: 18.04.2023</span>
+        </div>
+
+        <div class="calendar">
+          <div class="calendar__btn">
+            <svg class='icon calendar'>
+              <use xlink:href='img/svg/sprite.svg#calendar'></use>
+            </svg>
+          </div>
+          <div class="calendar__wrap"></div>
+        </div>
+
+        <div class="modal__close btn-modal-close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal__block">
+
+      </div>
+
+      <div class="modal__bottom">
+        <div class="modal__tabs">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-schedule-indexing">
+  <div class="modal__content">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h4 class="modal__title">Индексация</h4>
+
+        <div class="modal__close btn-modal-close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <form class="modal__block form-schedule-indexing">
+        <div class="modal__col">
+          <div class="form-input">
+            <div class="form-input__wpInput wpInput">
+              <input type="text" name="room_name" class="form-input__input input-2" disabled>
+              <button class="btn-room-data btn-modal-close btn-circle button">
+                <svg class='icon arrow'>
+                  <use xlink:href='img/svg/sprite.svg#arrow'></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-input">
+            <div class="form-input__row">
+              <span class="form-input__name">Дата будующей индексации</span>
+            </div>
+            <div class="form-input__wpInput wpInput">
+              <input type="date" name="future_index_date" class="form-input__input input-2">
+            </div>
+          </div>
+          <div class="form-input">
+            <div class="form-input__row">
+              <span class="form-input__name">Сумма индексации</span>
+            </div>
+            <div class="form-input__wpInput wpInput">
+              <input type="date" name="last_index_sum" class="form-input__input input-2">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__bottom">
+          <button class="modal__btn btn-modal-close button">Закрыть</button>
+          <button class="modal__btn btn-schedule-indexing-submit button">Запланировать индексацию</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231026205746"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231026205746"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231026205746"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231026205746"></script>
+<script src="js/app.min.js?_v=20231026205746"></script>
 </body>
 
 </html>
