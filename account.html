@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<title>Личный кабинет</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231026163842" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231026163842">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231026163842">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231026163842">
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231026163842"></script>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <header class="header">
+	<div class="header__body">
+		<div class="header__container _container">
+			<div class="header__content">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.png" alt="Лого">
+				</a>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item _my-accordion">
+							<div class="_my-accordion-controler">
+								<a href="#" class="header__link ">Выбрать склад</a>
+								<svg class='icon'>
+									<use xlink:href='img/svg/sprite.svg#triangle'></use>
+								</svg>
+							</div>
+							<ul class="header__subList _my-accordion-content">
+								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 1</a></li>
+								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 2</a></li>
+								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 3</a></li>
+								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 4</a></li>
+							</ul>
+						</li>
+						<li class="header__item"><a href="administrator.html" class="header__link hover-link link-page">Панель
+								администратора</a></li>
+						<li class="header__item"><a href="confirmation.html"
+								class="header__link hover-link link-page">Подтверждение</a></li>
+						<li class="header__item"><a href="account.html" class="header__link hover-link link-page">Личный кабинет</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__buttons" data-da=".header__list,479.98,last">
+					<a href="authorization.html" class="header__button link-authorization _none">Вход</a>
+					<a href="registration.html" class="header__button link-registration _none">Регистрация</a>
+					<button class="header__button button-exit">Выход</button>
+				</div>
+				<div class="header-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+    <main class='main'>
+      <section class="account" id="account">
+        <div class="account__container _container">
+          <div class="account__body" data-tabs-init="account-tabs">
+            <ul class="account__tabs">
+              <li class="account__tab _my-tabs-btn">Мои боксы</li>
+              <li class="account__tab _my-tabs-btn">Мои данные</li>
+              <li class="account__tab _my-tabs-btn">Способы оплаты</li>
+              <li class="account__tab _my-tabs-btn">Смена пароля</li>
+              <li class="account__tab _my-tabs-btn">Выезд</li>
+            </ul>
+
+            <div class="account__content content-boxes _my-tabs-content">
+              <h2 class="account__title">Мои боксы</h2>
+              <div class="content-boxes__body">
+
+                <div class="content-boxes__column">
+                  <div class="contract _my-accordion">
+                    <div class="contract__controler _my-accordion-controler">
+                      <span class="contract__title">Договор №2</span>
+                      <svg class='icon'>
+                        <use xlink:href='img/svg/sprite.svg#triangle'></use>
+                      </svg>
+                    </div>
+                    <div class="contract__content _my-accordion-content">
+                      <p class="contract__content-text">Стоимость: <span class="contract__content-value">23400
+                          ₽</span>
+                      </p>
+                      <p class="contract__content-text">Осталось дней: <span class="contract__content-value">152</span>
+                      </p>
+                      <p class="contract__content-text">Дата окончания: <span
+                          class="contract__content-value">19.11.2023</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-boxes__column">
+                  <div class="payment _my-accordion">
+                    <div class="payment__controler _my-accordion-controler">
+                      <span class="payment__title form-payment-title">Способы оплаты</span>
+                      <span class="payment__title form-add-card-title">Привязать новую карту</span>
+                      <svg class='icon'>
+                        <use xlink:href='img/svg/sprite.svg#triangle'></use>
+                      </svg>
+                    </div>
+                    <div class="payment__content _my-accordion-content">
+                      <form class="payment__form  form-payment">
+                        <div class="payment__cards">
+                          <label class="payment__cards_row select-card">
+                            <input type="radio" id="card-0" name="card" class="payment__input-radio">
+                            <label for="card-0" class="payment__cards_label-radio"></label>
+                            <div class="payment__cards_wpImg">
+                              <img src="img/icons/master.png" alt="Иконка">
+                            </div>
+                            <div class="payment__cards_number">
+                              <span>•• 3345</span>
+                            </div>
+                          </label>
+                          <label class="payment__cards_row select-card _active">
+                            <input type="radio" id="card-1" name="card" class="payment__input-radio">
+                            <label for="card-1" class="payment__cards_label-radio"></label>
+                            <div class="payment__cards_wpImg">
+                              <img src="img/icons/master.png" alt="Иконка">
+                            </div>
+                            <div class="payment__cards_number">
+                              <span>•• 8800</span>
+                            </div>
+                          </label>
+                          <div class="payment__cards_row add-card">
+                            <input type="radio" id="radio-2" name="card">
+                            <label for="card-2" class="payment__cards_label-radio"></label>
+                            <div class="payment__cards_wpImg">
+                              <img src="img/icons/master.png" alt="Иконка">
+                            </div>
+                            <div class="payment__cards_number">
+                              <span class="hover-link">Привязать карту</span>
+                            </div>
+                            <button class="payment__cards_button btn-add-card">+</button>
+                          </div>
+                        </div>
+                        <a href="#" class="payment__link hover-link modal-payment-term-btn-active">Выбрать срок
+                          оплаты</a>
+                      </form>
+                      <form class="payment__form payment__formAddCard form-add-card">
+                        <div class="payment__formAddCard_wpInput wpInput">
+                          <input type="text" name="num-card" class="payment__formAddCard_input"
+                            placeholder="Новая карта">
+                        </div>
+                        <div class="payment__formAddCard_row">
+                          <div class="payment__formAddCard_wpInput wpInput">
+                            <input type="text" name="srok" class="payment__formAddCard_input"
+                              placeholder="Срок действия">
+                          </div>
+                          <div class="payment__formAddCard_wpInput wpInput">
+                            <input type="text" name="cod" class="payment__formAddCard_input" placeholder="CVV / CVC">
+                          </div>
+                        </div>
+                        <button type="submit" class="payment__formAddCard_button button">Привязать карту</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="account__content content-data _my-tabs-content">
+              <div class="content-data__body">
+
+                <form class="content-data__form form-basic-information _tabs-content-data"
+                  data-form="basic-information">
+                  <h2 class="account__title">Основная информация</h2>
+                  <div class="content-data__block">
+                    <div class="content-data__wpImg">
+                      <img src="img/profile-img.png" alt="Картинка">
+                      <input type="file" id="img-account-0" class="content-data__input" multiple="false"
+                        accept=".png,.jpg,.jpeg">
+                      <label for="img-account-0" class="content-data__label-file">
+                        <span>Загрузить фото</span>
+                      </label>
+                    </div>
+                    <div class="content-data__coll">
+                      <div class="content-data__wpInput wpInput">
+                        <input type="text" name="familyname" class="content-data__input input" placeholder="Фамилия">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                      <div class="content-data__wpInput wpInput">
+                        <input type="text" name="firstname" class="content-data__input input" placeholder="Имя">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                      <div class="content-data__wpInput wpInput">
+                        <input type="text" name="patronymic" class="content-data__input input" placeholder="Отчество">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="content-data__button button">Сохранить изменения</button>
+                </form>
+
+                <form class="content-data__form form-contact-details _tabs-content-data" data-form="contact-details">
+                  <h2 class="account__title">Контактные данные</h2>
+                  <div class="content-data__block">
+                    <div class="content-data__coll">
+                      <div class="content-data__wpInput wpInput">
+                        <div class="auth__icons">
+                          <svg class="icon tel">
+                            <use xlink:href="img/svg/sprite.svg#tel"></use>
+                          </svg>
+                        </div>
+                        <input type="tel" name="username" class="content-data__input input" placeholder="Номер телефона"
+                          inputmode="tel">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                      <div class="content-data__wpInput wpInput">
+                        <div class="auth__icons">
+                          <svg class="icon mail">
+                            <use xlink:href="img/svg/sprite.svg#mail"></use>
+                          </svg>
+                        </div>
+                        <input type="email" name="email" class="content-data__input input"
+                          placeholder="Электронная почта">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                      <div class="content-data__wpInput wpInput">
+                        <div class="auth__icons">
+                          <svg class="icon calendar">
+                            <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                        <input type="date" name="birthday" class="content-data__input input"
+                          placeholder="Дата рождения">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="content-data__button button">Сохранить изменения</button>
+                </form>
+
+                <form class="content-data__form form-passport-data _tabs-content-data" data-form="passport-data">
+                  <h2 class="account__title">Паспортные данные</h2>
+                  <div class="content-data__block">
+                    <div class="content-data__wpImg">
+                      <img src="img/pasport-img.png" alt="Картинка">
+                      <input type="file" id="img-account-1" class="content-data__input">
+                      <label for="img-account-1" class="content-data__label-file">
+                        <span>Загрузить фото</span>
+                      </label>
+                    </div>
+                    <div class="content-data__coll">
+                      <div class="content-data__row">
+                        <div class="content-data__wpInput wpInput">
+                          <input type="text" name="series" class="content-data__input input" inputmode="tel"
+                            placeholder="Серия паспорта">
+                          <svg class='icon pencil'>
+                            <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                          </svg>
+                        </div>
+                        <div class="content-data__wpInput wpInput">
+                          <input type="text" name="no" class="content-data__input input" inputmode="tel"
+                            placeholder="Номер паспорта">
+                          <svg class='icon pencil'>
+                            <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="content-data__row">
+                        <div class="content-data__wpInput wpInput">
+                          <input type="text" name="issue_date" class="content-data__input input" inputmode="tel"
+                            placeholder="Дата выдачи">
+                          <svg class='icon pencil'>
+                            <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                          </svg>
+                        </div>
+                        <div class="content-data__wpInput wpInput">
+                          <input type="text" name="subdivision" class="content-data__input input" inputmode="tel"
+                            placeholder="Код подразделения">
+                          <svg class='icon pencil'>
+                            <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="content-data__wpInput wpInput">
+                        <input type="text" name="issued_by" class="content-data__input input"
+                          placeholder="Кем выдан паспорт">
+                        <svg class='icon pencil'>
+                          <use xlink:href='img/svg/sprite.svg#pencil'></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="content-data__button button">Сохранить изменения</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="account__content content-payments _my-tabs-content">
+              <h2 class="account__title">Способы оплаты</h2>
+              <div class="content-payments__body">
+                <div class="payment">
+                  <div class="payment__controler">
+                    <span class="payment__title form-payment-title">Способы оплаты</span>
+                    <span class="payment__title form-add-card-title">Привязать новую карту</span>
+                    <svg class='icon'>
+                      <use xlink:href='img/svg/sprite.svg#triangle'></use>
+                    </svg>
+                  </div>
+                  <div class="payment__content">
+                    <form class="payment__form  form-payment">
+                      <div class="payment__cards">
+                        <label class="payment__cards_row select-card">
+                          <input type="radio" id="card-3" name="card" class="payment__input-radio">
+                          <label for="card-3" class="payment__cards_label-radio"></label>
+                          <div class="payment__cards_wpImg">
+                            <img src="img/icons/master.png" alt="Иконка">
+                          </div>
+                          <div class="payment__cards_number">
+                            <span>•• 3345</span>
+                          </div>
+                        </label>
+                        <label class="payment__cards_row select-card _active">
+                          <input type="radio" id="card-4" name="card" class="payment__input-radio">
+                          <label for="card-4" class="payment__cards_label-radio"></label>
+                          <div class="payment__cards_wpImg">
+                            <img src="img/icons/master.png" alt="Иконка">
+                          </div>
+                          <div class="payment__cards_number">
+                            <span>•• 8800</span>
+                          </div>
+                        </label>
+                        <div class="payment__cards_row add-card">
+                          <input type="radio" id="radio-5" name="card">
+                          <label for="card-5" class="payment__cards_label-radio"></label>
+                          <div class="payment__cards_wpImg">
+                            <img src="img/icons/master.png" alt="Иконка">
+                          </div>
+                          <div class="payment__cards_number">
+                            <span class="hover-link">Привязать карту</span>
+                          </div>
+                          <button class="payment__cards_button btn-add-card">+</button>
+                        </div>
+                      </div>
+                      <a href="#" class="payment__link hover-link modal-payment-term-btn-active">Выбрать срок оплаты</a>
+                    </form>
+                    <form class="payment__form payment__formAddCard form-add-card">
+                      <div class="payment__formAddCard_wpInput wpInput">
+                        <svg class='icon card'>
+                          <use xlink:href='img/svg/sprite.svg#card'></use>
+                        </svg>
+                        <input type="text" name="num-card" class="payment__formAddCard_input input-num"
+                          placeholder="Новая карта">
+                      </div>
+                      <div class="payment__formAddCard_row">
+                        <div class="payment__formAddCard_wpInput wpInput">
+                          <input type="text" name="srok" class="payment__formAddCard_input" placeholder="Срок действия">
+                        </div>
+                        <div class="payment__formAddCard_wpInput wpInput">
+                          <input type="text" name="cod" class="payment__formAddCard_input" placeholder="CVV / CVC">
+                        </div>
+                      </div>
+                      <button type="submit" class="payment__formAddCard_button button">Привязать карту</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="account__content content-change-password _my-tabs-content">
+              <h2 class="account__title">Смена пароля</h2>
+              <div class="content-change-password__body">
+                <form class="content-change-password__form form-change-password">
+                  <div class="content-change-password__coll">
+                    <div class="content-change-password__wpInput wpInput">
+                      <div class="auth__icons">
+                        <svg class="icon lock">
+                          <use xlink:href="img/svg/sprite.svg#lock"></use>
+                        </svg>
+                      </div>
+                      <input type="password" name="current_password" class="content-change-password__input input"
+                        placeholder="Старый пароль">
+                      <svg class='icon eye'>
+                        <use xlink:href='img/svg/sprite.svg#eye'></use>
+                      </svg>
+                    </div>
+                    <div class="content-change-password__wpInput wpInput">
+                      <div class="auth__icons">
+                        <svg class="icon lock">
+                          <use xlink:href="img/svg/sprite.svg#lock"></use>
+                        </svg>
+                      </div>
+                      <input type="password" name="password" class="content-change-password__input input"
+                        placeholder="Новый пароль">
+                      <svg class='icon eye'>
+                        <use xlink:href='img/svg/sprite.svg#eye'></use>
+                      </svg>
+                    </div>
+                    <div class="content-change-password__wpInput wpInput">
+                      <div class="auth__icons">
+                        <svg class="icon lock">
+                          <use xlink:href="img/svg/sprite.svg#lock-check"></use>
+                        </svg>
+                      </div>
+                      <input type="password" name="repassword" class="content-change-password__input input"
+                        placeholder="Подтвердить новый пароль">
+                      <svg class='icon eye'>
+                        <use xlink:href='img/svg/sprite.svg#eye'></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <button type="submit" class="content-change-password__button button">Подтвердить</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="account__content content-exit _my-tabs-content">
+              <h2 class="account__title">Выезд</h2>
+
+              <div class="content-exit__body content-exit-stage-1">
+                <div class="box _box-tabs-content" data-box="98">
+                  <div class="box__title">Бокс 98</div>
+                  <div class="box__content">
+                    <div class="box__row">
+                      <span class="box__name">Площадь</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Объем</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Размер бокса</span>
+                      <span class="box__value">0.93х1.07х1.0 м</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Максимальная нагрузка</span>
+                      <span class="box__value">350 кг/м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Расположение</span>
+                      <span class="box__value">Обычный</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Этаж</span>
+                      <span class="box__value">-1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box _box-tabs-content" data-box="98">
+                  <div class="box__title">Бокс 288</div>
+                  <div class="box__content">
+                    <div class="box__row">
+                      <span class="box__name">Площадь</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Объем</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Размер бокса</span>
+                      <span class="box__value">0.93х1.07х1.0 м</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Максимальная нагрузка</span>
+                      <span class="box__value">350 кг/м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Расположение</span>
+                      <span class="box__value">Обычный</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Этаж</span>
+                      <span class="box__value">-1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box _box-tabs-content" data-box="98">
+                  <div class="box__title">Бокс 129</div>
+                  <div class="box__content">
+                    <div class="box__row">
+                      <span class="box__name">Площадь</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Объем</span>
+                      <span class="box__value">1.0м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Размер бокса</span>
+                      <span class="box__value">0.93х1.07х1.0 м</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Максимальная нагрузка</span>
+                      <span class="box__value">350 кг/м<sup>2</sup></span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Расположение</span>
+                      <span class="box__value">Обычный</span>
+                    </div>
+                    <div class="box__row">
+                      <span class="box__name">Этаж</span>
+                      <span class="box__value">-1</span>
+                    </div>
+                  </div>
+                </div>
+                <form class="content-exit__form form-exit-1">
+                  <div class="content-exit__wpInput wpInput">
+                    <input type="date" name="" class="content-exit__input input" placeholder="Дата выезда">
+                  </div>
+                  <div class="content-exit__wpInput wpInput">
+                    <input type="text" name="" class="content-exit__input input" placeholder="Причина выезда">
+                  </div>
+                  <button class="content-exit__button button">Выехать</button>
+                </form>
+              </div>
+
+              <div class="content-exit__body content-exit-stage-2 _none">
+                <div class="content-exit__wpImg">
+                  <img src="img/cell-1.png" alt="Картинка">
+                </div>
+                <div class="content-exit__watch watch">
+                  <div class="watch__top">
+                    <img src="img/icons/ellipses.png" alt="Иконка">
+                    <p>загрузите фото чистой и пустой ячейки для проверки</p>
+                  </div>
+                  <div class="watch__wpTime">
+                    <span class="watch__time-text">Осталось времени для загрузки:</span>
+                    <div class="watch__time">
+                      <div class="watch__time-item">
+                        <b class="watch__time-count count-days"><span>0</span></b>
+                        <b class="watch__time-count count-days"><span>0</span></b>
+                        <span class="watch__time-span time-days">Дней</span>
+                      </div>
+                      <span class="watch__time-separator">:</span>
+                      <div class="watch__time-item">
+                        <b class="watch__time-count count-hours"><span>0</span></b>
+                        <b class="watch__time-count count-hours"><span>0</span></b>
+                        <span class="watch__time-span time-hours">Часов</span>
+                      </div>
+                      <span class="watch__time-separator">:</span>
+                      <div class="watch__time-item">
+                        <b class="watch__time-count count-minutes"><span>0</span></b>
+                        <b class="watch__time-count count-minutes"><span>0</span></b>
+                        <span class="watch__time-span time-minutes">Минут</span>
+                      </div>
+                      <span class="watch__time-separator">:</span>
+                      <div class="watch__time-item">
+                        <b class="watch__time-count count-seconds"><span>0</span></b>
+                        <b class="watch__time-count count-seconds"><span>0</span></b>
+                        <span class="watch__time-span time-seconds">Секунд</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="watch__bottom">
+                    <button class="watch__button-download button">Загрузить фото ячейки</button>
+                    <button class="watch__button-cancel button">Отменить выезд</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-exit__tabs">
+                <button class="content-exit__tab _box-tabs-btn">98</button>
+                <button class="content-exit__tab _box-tabs-btn">288</button>
+                <button class="content-exit__tab _box-tabs-btn">129</button>
+              </div>
+            </div>
+
+            <div class="account__bodyCells account-cells">
+              <h2 class="account__title title-cell">Мои ячейки</h2>
+              <div class="account__wpCells">
+                <div class="warehouse__right_cell">
+                  <div class="warehouse__right_cell_content">
+                    <div class="warehouse__right_cell_row">
+                      <span class="warehouse__right_cell_number">№241</span>
+                      <span class="warehouse__right_cell_flor">3 этаж</span>
+                    </div>
+                    <div class="warehouse__right_cell_row">
+                      <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
+                      <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
+                    </div>
+                  </div>
+                  <a href="" class="warehouse__right_cell_link">от 28800Р</a>
+                </div>
+                <div class="warehouse__right_cell">
+                  <div class="warehouse__right_cell_content">
+                    <div class="warehouse__right_cell_row">
+                      <span class="warehouse__right_cell_number">№241</span>
+                      <span class="warehouse__right_cell_flor">3 этаж</span>
+                    </div>
+                    <div class="warehouse__right_cell_row">
+                      <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
+                      <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
+                    </div>
+                  </div>
+                  <a href="" class="warehouse__right_cell_link">от 28800Р</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-data_wpButton">
+              <button class="content-data_button button _tabs-btn-data">Основная информация</button>
+              <button class="content-data_button button _tabs-btn-data">Контактные данные</button>
+              <button class="content-data_button button _tabs-btn-data">Паспортные данные</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__content">
+				<a href="index.html" class="footer__logo">
+					<img src="img/logo.png" alt="Лого">
+				</a>
+				<div class="footer__block">
+					<div class="footer__messengers">
+						<a href="#">
+							<svg class="icon tel">
+								<use xlink:href="img/svg/sprite.svg#tel"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="icon telegram">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="icon whatsapp">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+					</div>
+					<address class="footer__address">г. Москва, ул. Донская, д.8 стр. 1
+						индекс 119049</address>
+					<span class="footer__store">2023 Store</span>
+				</div>
+
+				<ul class="footer__contacts">
+					<li>
+						<svg class='icon tel'>
+							<use xlink:href='img/svg/sprite.svg#tel'></use>
+						</svg>
+						<a href="tel:79211234567" class="footer__tel hover-link">+7 921 123 45 67</a>
+					</li>
+					<li>
+						<svg class='icon mailbox'>
+							<use xlink:href='img/svg/sprite.svg#mailbox'></use>
+						</svg>
+						<a href="mailto:79211234567" class="footer__mail">store@company.ru</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+  </div>
+  <div class="modal modal-payment-term">
+  <div class="modal__content">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h4 class="modal__title">Срок оплаты</h4>
+        <div class="modal__close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form class="modal__form form-payment-term">
+        <select name="" aria-placeholder="№ ячейки" class="modal__select select-payment-term">
+          <option value="№234">№234</option>
+          <option value="№123">№123</option>
+          <option value="№312">№312</option>
+        </select>
+        <div class="modal__wpInput wpInput">
+          <input type="text" name="" class="modal__input input-2" placeholder="Срок оплаты">
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__result">
+            К оплате: <span class="payment-term-price">23400 ₽</span>
+          </div>
+          <button type="submit" class="modal__button button">Оплатить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-confirm-number">
+  <div class="modal__content">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h4 class="modal__title">Подтвердите номер</h4>
+        <div class="modal__close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="modal__block form-confirm-number">
+        <form class="modal__wpInput wpInput form-get-code">
+          <input type="tel" name="phone" class="modal__input input-2" inputmode="tel" placeholder="Номер телефона">
+          <button type="submit" class="button-input">Получить код</button>
+        </form>
+        <form class="modal__wpInput wpInput form-send-code">
+          <input type="tel" name="code" class="modal__input input-2 disabled" inputmode="tel" placeholder="Код">
+          <button type="submit" class="button-input disabled">Подтвердить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231026163842"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231026163842"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231026163842"></script>
+<script src="js/app.min.js?_v=20231026163842"></script>
+</body>
+
+</html>

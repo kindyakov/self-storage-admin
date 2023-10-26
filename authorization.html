@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<title>Авторизация</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231026163842" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231026163842">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231026163842">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231026163842">
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231026163842"></script>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <header class="header">
+      <div class="header__body">
+        <div class="header__container _container">
+          <div class="header__content">
+            <a href="index.html" class="header__logo">
+              <img src="img/logo.png" alt="Лого">
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class='main'>
+      <section class="auth">
+        <div class="auth__container _container">
+          <div class="auth__body">
+            <nav class="auth__nav">
+              <ul class="auth__list">
+                <li class="auth__item"><a href="authorization.html"
+                    class="auth__link  authorization-link _active">Авторизация</a></li>
+                <li class="auth__item"><a href="registration.html" class="auth__link registration-link">Регистрация</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="auth__content">
+              <form class="auth__form form" id="authorization">
+                <div class="auth__wpInputs wpInputs">
+                  <div class="auth__wpInput wpInput">
+                    <div class="auth__icons">
+                      <svg class='icon tel'>
+                        <use xlink:href='img/svg/sprite.svg#tel'></use>
+                      </svg>
+                    </div>
+                    <input type="tel" name="username" class="auth__input input" placeholder="Номер телефона"
+                      inputmode="tel">
+                  </div>
+                  <div class="auth__wpInput wpInput">
+                    <div class="auth__icons">
+                      <svg class='icon lock'>
+                        <use xlink:href='img/svg/sprite.svg#lock'></use>
+                      </svg>
+                    </div>
+                    <input type="password" name="password" class="auth__input input" placeholder="Пароль">
+                  </div>
+                </div>
+                <button type="submit" class="auth__button button">Войти</button>
+                <a href="#" class="auth__forgot-password modal-btn-active">Забыли пароль?</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__content">
+				<a href="index.html" class="footer__logo">
+					<img src="img/logo.png" alt="Лого">
+				</a>
+				<div class="footer__block">
+					<div class="footer__messengers">
+						<a href="#">
+							<svg class="icon tel">
+								<use xlink:href="img/svg/sprite.svg#tel"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="icon telegram">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="icon whatsapp">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+					</div>
+					<address class="footer__address">г. Москва, ул. Донская, д.8 стр. 1
+						индекс 119049</address>
+					<span class="footer__store">2023 Store</span>
+				</div>
+
+				<ul class="footer__contacts">
+					<li>
+						<svg class='icon tel'>
+							<use xlink:href='img/svg/sprite.svg#tel'></use>
+						</svg>
+						<a href="tel:79211234567" class="footer__tel hover-link">+7 921 123 45 67</a>
+					</li>
+					<li>
+						<svg class='icon mailbox'>
+							<use xlink:href='img/svg/sprite.svg#mailbox'></use>
+						</svg>
+						<a href="mailto:79211234567" class="footer__mail">store@company.ru</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+  </div>
+  <div class="modal modal-password-recovery">
+  <div class="modal__content">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h4 class="modal__title">Восстановление пароля</h4>
+        <div class="modal__close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="modal__block">
+        <div class="modal__col">
+          <form class="modal__wpInput wpInput form-get-code">
+            <input type="tel" name="username" class="modal__input input" placeholder="Номер телефона" inputmode="tel">
+            <button type="submit" class="button-input">Получить код</button>
+          </form>
+          <form class="modal__wpInput wpInput form-send-code">
+            <input type="text" name="code" class="modal__input input disabled" placeholder="Код" inputmode="tel"
+              disabled>
+            <button type="submit" class="button-input disabled">Код</button>
+          </form>
+        </div>
+
+        <form class="modal__col form-recovery-password">
+          <div class="modal__wpInput wpInput">
+            <input type="password" name="password" class="modal__input input disabled" placeholder="Новый пароль"
+              disabled>
+          </div>
+          <div class="modal__wpInput wpInput">
+            <input type="password" name="repassword" class="modal__input input disabled"
+              placeholder="Подтверждение пароля" disabled>
+          </div>
+          <button type="submit" class="modal__button button disabled">Задать новый пароль</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231026163842"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231026163842"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231026163842"></script>
+<script src="js/app.min.js?_v=20231026163842"></script>
+</body>
+
+</html>
