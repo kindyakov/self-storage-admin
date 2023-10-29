@@ -6,12 +6,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231029130028" />
-	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231029130028">
-	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231029130028">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231029130028">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231030023336" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231030023336">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231030023336">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231030023336">
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231029130028"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231030023336"></script>
 </head>
 
 <body>
@@ -183,7 +183,8 @@
                   <svg class='icon search'>
                     <use xlink:href='img/svg/sprite.svg#search'></use>
                   </svg>
-                  <input type="search" class="administrator__input-search" placeholder="Поиск по Фамилии">
+                  <input type="search" name="search_str" class="administrator__input-search"
+                    placeholder="Поиск по Фамилии">
                 </div>
                 <div class="administrator__wpRadio">
                   <div class="administrator__burger-search">
@@ -194,34 +195,34 @@
                   <div class="administrator__wpRadio_radios">
                     <div class="administrator__wpRadio_coll">
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio" checked>
+                        <input type="radio" name="active" value="0" class="administrator__input-radio" checked>
                         <span>Все</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio">
+                        <input type="radio" name="active" value="1" class="administrator__input-radio">
                         <span>Активные</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio">
+                        <input type="radio" name="active" value="2" class="administrator__input-radio">
                         <span>Съезжающие</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio">
+                        <input type="radio" name="active" value="-1" class="administrator__input-radio">
                         <span>Неактивные</span>
                       </label>
                     </div>
                     <div class="administrator__wpRadio_coll">
                       <span>Запланирована индексация</span>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rads" class="administrator__input-radio" checked>
+                        <input type="radio" name="indexation" value="0" class="administrator__input-radio" checked>
                         <span>Неважно</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rads" class="administrator__input-radio">
+                        <input type="radio" name="indexation" value="1" class="administrator__input-radio">
                         <span>да</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rads" class="administrator__input-radio">
+                        <input type="radio" name="indexation" value="-1" class="administrator__input-radio">
                         <span>нет</span>
                       </label>
                     </div>
@@ -245,159 +246,6 @@
                     </tr>
                   </thead>
                   <tbody class="content-agreements__tbody">
-                    <tr class="content-agreements__tr">
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>1</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>2023-08-27</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body fio">
-                          <span>Киб<br> Елизавета<br> Игоревна</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>287</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>3600</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>Не запланирована</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <div class="content-agreements__td-content">
-                            <div class="content-agreements__td-coll">
-                              <button class="content-agreements__td-button btn-index button">Индексировать</button>
-                              <button class="content-agreements__td-button btn-add-payment button">Добавить
-                                платеж</button>
-                            </div>
-                            <div class="content-agreements__td-row">
-                              <button class="content-agreements__td-button button-circle button">i</button>
-                              <button class="content-agreements__td-button button-circle button">
-                                <svg class='icon arrow'>
-                                  <use xlink:href='img/svg/sprite.svg#arrow'></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="content-agreements__tr">
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>1</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>2023-08-27</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body fio">
-                          <span>Киб<br> Елизавета<br> Игоревна</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>287</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>3600</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>Не запланирована</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <div class="content-agreements__td-content">
-                            <div class="content-agreements__td-coll">
-                              <button class="content-agreements__td-button btn-index button">Индексировать</button>
-                              <button class="content-agreements__td-button btn-add-payment button">Добавить
-                                платеж</button>
-                            </div>
-                            <div class="content-agreements__td-row">
-                              <button class="content-agreements__td-button button-circle button">i</button>
-                              <button class="content-agreements__td-button button-circle button">
-                                <svg class='icon arrow'>
-                                  <use xlink:href='img/svg/sprite.svg#arrow'></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="content-agreements__tr">
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>1</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>2023-08-27</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body fio">
-                          <span>Киб<br> Елизавета<br> Игоревна</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>287</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>3600</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <span>Не запланирована</span>
-                        </div>
-                      </td>
-                      <td class="content-agreements__td">
-                        <div class="content-agreements__td-body">
-                          <div class="content-agreements__td-content">
-                            <div class="content-agreements__td-coll">
-                              <button class="content-agreements__td-button btn-index button">Индексировать</button>
-                              <button class="content-agreements__td-button btn-add-payment button">Добавить
-                                платеж</button>
-                            </div>
-                            <div class="content-agreements__td-row">
-                              <button class="content-agreements__td-button button-circle button">i</button>
-                              <button class="content-agreements__td-button button-circle button">
-                                <svg class='icon arrow'>
-                                  <use xlink:href='img/svg/sprite.svg#arrow'></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -2302,11 +2150,144 @@
     </div>
   </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231029130028"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231029130028"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20231029130028"></script>
-<script src="assets/libs/simplebar/simplebar.min.js?_v=20231029130028"></script>
-<script src="js/app.min.js?_v=20231029130028"></script>
+
+<div class="modal modal-creating-agreement">
+  <div class="modal__content">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h4 class="modal__title">Создание договора</h4>
+
+        <div class="modal__close btn-modal-close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form class="modal__block form-creating-agreement">
+        <div class="modal__row">
+          <div class="modal__col">
+            <div class="form-input">
+              <label class="form-input__row">
+                <input type="radio" name="radio" value="0" id="input-radio-client-0">
+                <label for="input-radio-client-0" class="form-input__label-radio"></label>
+                <span>Новый клиент</span>
+              </label>
+              <label class="form-input__row">
+                <input type="radio" name="radio" value="1" id="input-radio-client-1">
+                <label for="input-radio-client-1" class="form-input__label-radio"></label>
+                <span>Старый клиент</span>
+              </label>
+            </div>
+          </div>
+          <div class="modal__col">
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">ФИО</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="text" name="fullname" class="form-input__input input-2">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__flex">
+          <div class="modal__col">
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Дата рождения</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="date" name="birthday" class="form-input__input input-2">
+                <svg class='icon calendar'>
+                  <use xlink:href='img/svg/sprite.svg#calendar'></use>
+                </svg>
+              </div>
+
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Серия паспорта</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="text" name="series" class="form-input__input input-2">
+              </div>
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Код подразделения</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="text" name="subdivision" class="form-input__input input-2">
+              </div>
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Номер телефона</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="tel" name="username" class="form-input__input input-2" inputmode="tel">
+              </div>
+            </div>
+          </div>
+          <div class="modal__col">
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Номер паспорта</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="text" name="no" class="form-input__input input-2" inputmode="tel">
+              </div>
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Дата выдачи</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="date" name="issue_date" class="form-input__input input-2">
+                <svg class='icon calendar'>
+                  <use xlink:href='img/svg/sprite.svg#calendar'></use>
+                </svg>
+              </div>
+
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Кем выдан</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="text" name="issued_by" class="form-input__input input-2">
+              </div>
+
+            </div>
+            <div class="form-input">
+              <div class="form-input__row">
+                <span class="form-input__name">Email</span>
+              </div>
+              <div class="form-input__wpInput wpInput">
+                <input type="email" name="email" class="form-input__input input-2">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <label class="modal__label">
+          <div class="modal__preview-img">
+            <img src="" alt="">
+          </div>
+          <input type="file" name="img_pass">
+          <div class="btn">Загрузить фото/скан паспорта</div>
+        </label>
+        <div class="modal__bottom">
+          <button type="submit" class="modal__buttom button">Создать договор</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231030023336"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231030023336"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231030023336"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231030023336"></script>
+<script src="js/app.min.js?_v=20231030023336"></script>
 </body>
 
 </html>
