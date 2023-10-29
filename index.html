@@ -6,12 +6,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231026205746" />
-	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231026205746">
-	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231026205746">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231026205746">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231029130028" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231029130028">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231029130028">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231029130028">
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231026205746"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231029130028"></script>
 </head>
 
 <body>
@@ -23,22 +23,11 @@
 				<a href="index.html" class="header__logo">
 					<img src="img/logo.png" alt="Лого">
 				</a>
+				<select name="warehouse" class="header__warehouse-select">
+
+				</select>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__item _my-accordion">
-							<div class="_my-accordion-controler">
-								<a href="#" class="header__link ">Выбрать склад</a>
-								<svg class='icon'>
-									<use xlink:href='img/svg/sprite.svg#triangle'></use>
-								</svg>
-							</div>
-							<ul class="header__subList _my-accordion-content">
-								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 1</a></li>
-								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 2</a></li>
-								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 3</a></li>
-								<li class="header__subItem"><a href="" class="header__subLink hover-link">Склад 4</a></li>
-							</ul>
-						</li>
 						<li class="header__item"><a href="administrator.html" class="header__link hover-link link-page">Панель
 								администратора</a></li>
 						<li class="header__item"><a href="confirmation.html"
@@ -48,7 +37,7 @@
 					</ul>
 				</nav>
 
-				<div class="header__buttons" data-da=".header__list,479.98,last">
+				<div class="header__buttons" data-da=".header__list,700,last">
 					<a href="authorization.html" class="header__button link-authorization _none">Вход</a>
 					<a href="registration.html" class="header__button link-registration _none">Регистрация</a>
 					<button class="header__button button-exit">Выход</button>
@@ -131,10 +120,10 @@
 										<div class="calculator__form_wpSelect">
 											<span class="span">Выберите склад</span>
 											<select name="warehouse" class="calculator__form_select">
-												<option value="Склад 1">Склад 1</option>
-												<option value="Склад 2">Склад 2</option>
-												<option value="Склад 3">Склад 3</option>
-												<option value="Склад 4">Склад 4</option>
+												<option value="1">Склад 1</option>
+												<option value="2">Склад 2</option>
+												<option value="3">Склад 3</option>
+												<option value="4">Склад 4</option>
 											</select>
 										</div>
 
@@ -188,9 +177,12 @@
 
 										<div class="warehouse__left_resultCell_swiper swiper">
 											<div class="warehouse__left_resultCell_swiper-wrapper swiper-wrapper">
-												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№127</div>
-												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№257</div>
-												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">Итог</div>
+												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№127
+												</div>
+												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№257
+												</div>
+												<div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">Итог
+												</div>
 											</div>
 										</div>
 
@@ -853,10 +845,10 @@
 	</div>
 </footer>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231026205746"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20231026205746"></script>
-<script src="assets/libs/simplebar/simplebar.min.js?_v=20231026205746"></script>
-<script src="js/app.min.js?_v=20231026205746"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231029130028"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231029130028"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231029130028"></script>
+<script src="js/app.min.js?_v=20231029130028"></script>
 </body>
 
 </html>
