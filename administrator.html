@@ -6,12 +6,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231031010348" />
-	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231031010348">
-	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231031010348">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231031010348">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231031172840" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231031172840">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231031172840">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231031172840">
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231031010348"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231031172840"></script>
 </head>
 
 <body>
@@ -655,13 +655,13 @@
             </div>
 
             <div class="administrator__content content-cells _my-tabs-content">
-              <div class="warehouse__content" id="warehouse">
+              <div class="warehouse__content" id="administrator-warehouse">
                 <div class="warehouse__right_tabs">
-                  <div class="warehouse__right_tab free" data-cell="">Свободные</div>
-                  <div class="warehouse__right_tab booked" data-cell="">Забронированные</div>
-                  <div class="warehouse__right_tab busy" data-cell="">Занятые</div>
-                  <div class="warehouse__right_tab releasing" data-cell="">Освобождающиеся</div>
-                  <div class="warehouse__right_tab all _active" data-cell="">Все</div>
+                  <div class="warehouse__right_tab free" data-rented="0">Свободные</div>
+                  <div class="warehouse__right_tab booked" data-rented="0.5">Забронированные</div>
+                  <div class="warehouse__right_tab busy" data-rented="1">Занятые</div>
+                  <div class="warehouse__right_tab releasing" data-rented="0.75">Освобождающиеся</div>
+                  <div class="warehouse__right_tab all _active" data-rented="all">Все</div>
                 </div>
                 <div class="warehouse__left">
                   <div class="warehouse__tabs">
@@ -672,17 +672,14 @@
                     <div class="warehouse__tabs_item" data-floor="4"><span>4 этаж</span></div>
                     <div class="warehouse__tabs_item" data-floor="5"><span>5 этаж</span></div>
                   </div>
-                  <div class="warehouse__left_resultCell" data-tabs-init="warehouse-resultCell-tabs">
+                  <div class="warehouse__left_resultCell"
+                    data-tabs-init="administrator-warehouse-resultCell-tabs">
                     <div class="warehouse__left_resultCell_slider">
-
                       <div class="warehouse__left_resultCell_swiper swiper">
                         <div class="warehouse__left_resultCell_swiper-wrapper swiper-wrapper">
-                          <div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№127
-                          </div>
-                          <div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">№257
-                          </div>
-                          <div class="warehouse__left_resultCell_swiper-slide swiper-slide _resultCell-tabs-btn">Итог
-                          </div>
+                          <div
+                            class="warehouse__left_resultCell_swiper-slide swiper-slide result-slide-tabs _resultCell-tabs-btn">
+                            Итого</div>
                         </div>
                       </div>
 
@@ -699,54 +696,23 @@
 
                     </div>
 
-                    <div class="warehouse__left_resultCell_content _resultCell-tabs-content">
+                    <div
+                      class="warehouse__left_resultCell_content _resultCell-tabs-content result-content-tab _tab-content-active">
                       <div class="flex">
                         <div class="flex-left">
                           <span class="number"
-                            data-da="[data-tabs-content='warehouse-resultCell-tabs-0'] .flex-row,380,first">№127</span>
+                            data-da="[data-tabs-content='administrator-warehouse-resultCell-tabs-0'] .flex-row,380,first">Итог</span>
                         </div>
                         <div class="flex-right">
                           <div class="flex-row">
-                            <span class="floor">3 этаж</span>
+                            <span class="floor">1 ячейка</span>
                             <span class="area">11 м<sup>2</sup></span>
                           </div>
-                          <span class="dimensions">1.23 х 1.19 х 1.72 м</span>
                         </div>
                       </div>
                       <a href="" class="link">от 36000 ₽</a>
                     </div>
-                    <div class="warehouse__left_resultCell_content _resultCell-tabs-content">
-                      <div class="flex">
-                        <div class="flex-left">
-                          <span class="number"
-                            data-da="[data-tabs-content='warehouse-resultCell-tabs-1'] .flex-row,380,first">№257</span>
-                        </div>
-                        <div class="flex-right">
-                          <div class="flex-row">
-                            <span class="floor">3 этаж</span>
-                            <span class="area">11 м<sup>2</sup></span>
-                          </div>
-                          <span class="dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="link">от 36000 ₽</a>
-                    </div>
-                    <div class="warehouse__left_resultCell_content _resultCell-tabs-content">
-                      <div class="flex">
-                        <div class="flex-left">
-                          <span class="number"
-                            data-da="[data-tabs-content='warehouse-resultCell-tabs-2'] .flex-row,380,first">Итог</span>
-                        </div>
-                        <div class="flex-right">
-                          <div class="flex-row">
-                            <span class="floor">3 этаж</span>
-                            <span class="area">11 м<sup>2</sup></span>
-                          </div>
-                          <span class="dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="link">от 36000 ₽</a>
-                    </div>
+
                   </div>
                   <svg class="warehouse__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3413 1358" fill="none">
   <path
@@ -998,67 +964,67 @@
 
   <!-- Cells -->
   <g class="rectWrapper">
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="1">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="108" y="44" width="303" height="506" fill="#FBFBFB"></rect>
       <text x="259.5" y="342" font-size="90" fill="black" text-anchor="middle">145</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="421" y="44" width="305" height="506" fill="#FBFBFB"></rect>
       <text x="573.5" y="342" font-size="90" fill="black" text-anchor="middle">146</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="734" y="44" width="324" height="506" fill="#FBFBFB"></rect>
       <text x="896" y="342" font-size="90" fill="black" text-anchor="middle">147</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="1">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="1066" y="44" width="306" height="506" fill="#FBFBFB"></rect>
       <text x="1219" y="342" font-size="90" fill="black" text-anchor="middle">148</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="1">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="1380" y="44" width="323" height="506" fill="#FBFBFB"></rect>
       <text x="1541.5" y="342" font-size="90" fill="black" text-anchor="middle">149</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="1710" y="44" width="307" height="506" fill="#FBFBFB"></rect>
       <text x="1863.5" y="342" font-size="90" fill="black" text-anchor="middle">150</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="2025" y="44" width="322" height="506" fill="#FBFBFB"></rect>
       <text x="2186" y="342" font-size="90" fill="black" text-anchor="middle">151</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="2356" y="44" width="312" height="506" fill="#FBFBFB"></rect>
       <text x="2512" y="342" font-size="90" fill="black" text-anchor="middle">152</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="108" y="792" width="303" height="507" fill="#FBFBFB"></rect>
       <text x="259.5" y="1090.5" font-size="90" fill="black" text-anchor="middle">153</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="422" y="792" width="302" height="507" fill="#FBFBFB"></rect>
       <text x="573" y="1090.5" font-size="90" fill="black" text-anchor="middle">154</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="734" y="792" width="323" height="507" fill="#FBFBFB"></rect>
       <text x="895.5" y="1090.5" font-size="90" fill="black" text-anchor="middle">155</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="1065" y="792" width="305" height="507" fill="#FBFBFB"></rect>
       <text x="1217.5" y="1090.5" font-size="90" fill="black" text-anchor="middle">156</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="1380" y="792" width="322" height="507" fill="#FBFBFB"></rect>
       <text x="1541" y="1090.5" font-size="90" fill="black" text-anchor="middle">157</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="1711" y="792" width="305" height="507" fill="#FBFBFB"></rect>
       <text x="1863.5" y="1090.5" font-size="90" fill="black" text-anchor="middle">158</text>
     </a>
-    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="1">
+    <a href="#" class="warehouse__svg-cell" data-svg-room-id="" data-rented="">
       <rect class="" x="2025" y="793" width="322" height="506" fill="#FBFBFB"></rect>
       <text x="2186" y="1091" font-size="90" fill="black" text-anchor="middle">159</text>
     </a>
-    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="0.5">
+    <a href="#" class="warehouse__svg-cell _not" data-svg-room-id="" data-rented="">
       <rect class="" x="2356" y="793" width="306" height="506" fill="#FBFBFB"></rect>
       <text x="2509" y="1091" font-size="90" fill="black" text-anchor="middle">160</text>
     </a>
@@ -1095,73 +1061,11 @@
                       <span class="warehouse__noAvailable_text">Нет свободных ячеек</span>
                     </div>
                   </div>
-
+                  <div class="warehouse__empty">
+                    <span>Нет ячеек</span>
+                  </div>
                   <div class="warehouse__right_wpCell">
-                    <div class="warehouse__right_cell free">
-                      <div class="warehouse__right_cell_content">
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_number">№241</span>
-                          <span class="warehouse__right_cell_flor">1800 ₽/мес</span>
-                        </div>
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
-                          <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="warehouse__right_cell_link">от 28800Р</a>
-                    </div>
-                    <div class="warehouse__right_cell booked">
-                      <div class="warehouse__right_cell_content">
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_number">№241</span>
-                          <span class="warehouse__right_cell_flor">1800 ₽/мес</span>
-                        </div>
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
-                          <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="warehouse__right_cell_link">от 28800Р</a>
-                    </div>
-                    <div class="warehouse__right_cell busy">
-                      <div class="warehouse__right_cell_content">
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_number">№241</span>
-                          <span class="warehouse__right_cell_flor">1800 ₽/мес</span>
-                        </div>
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
-                          <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="warehouse__right_cell_link">от 28800Р</a>
-                    </div>
-                    <div class="warehouse__right_cell releasing">
-                      <div class="warehouse__right_cell_content">
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_number">№241</span>
-                          <span class="warehouse__right_cell_flor">1800 ₽/мес</span>
-                        </div>
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
-                          <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="warehouse__right_cell_link">от 28800Р</a>
-                    </div>
-                    <div class="warehouse__right_cell all">
-                      <div class="warehouse__right_cell_content">
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_number">№241</span>
-                          <span class="warehouse__right_cell_flor">1800 ₽/мес</span>
-                        </div>
-                        <div class="warehouse__right_cell_row">
-                          <span class="warehouse__right_cell_area">7 м<sup>3</sup></span>
-                          <span class="warehouse__right_cell_dimensions">1.23 х 1.19 х 1.72 м</span>
-                        </div>
-                      </div>
-                      <a href="" class="warehouse__right_cell_link">от 28800Р</a>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -2283,11 +2187,11 @@
     </div>
   </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231031010348"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231031010348"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20231031010348"></script>
-<script src="assets/libs/simplebar/simplebar.min.js?_v=20231031010348"></script>
-<script src="js/app.min.js?_v=20231031010348"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231031172840"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231031172840"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231031172840"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231031172840"></script>
+<script src="js/app.min.js?_v=20231031172840"></script>
 </body>
 
 </html>
