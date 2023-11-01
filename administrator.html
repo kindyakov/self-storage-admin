@@ -6,12 +6,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231031172840" />
-	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231031172840">
-	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231031172840">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231031172840">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231101171651" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20231101171651">
+	<link rel="stylesheet" href="assets/libs/simplebar/simplebar.min.css?_v=20231101171651">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231101171651">
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231031172840"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20231101171651"></script>
 </head>
 
 <body>
@@ -672,8 +672,7 @@
                     <div class="warehouse__tabs_item" data-floor="4"><span>4 этаж</span></div>
                     <div class="warehouse__tabs_item" data-floor="5"><span>5 этаж</span></div>
                   </div>
-                  <div class="warehouse__left_resultCell"
-                    data-tabs-init="administrator-warehouse-resultCell-tabs">
+                  <div class="warehouse__left_resultCell" data-tabs-init="administrator-warehouse-resultCell-tabs">
                     <div class="warehouse__left_resultCell_slider">
                       <div class="warehouse__left_resultCell_swiper swiper">
                         <div class="warehouse__left_resultCell_swiper-wrapper swiper-wrapper">
@@ -1073,18 +1072,20 @@
             </div>
 
             <div class="administrator__content content-payments _my-tabs-content">
-              <form class="administrator__form-search form-search">
+              <form class="administrator__form-search form-search form-search-payments">
                 <div class="administrator__wpInput wpInput">
+                  <input type="search" name="filter_start_date" class="administrator__input-search"
+                    placeholder="Дата начала выгрузки">
                   <svg class='icon calendar'>
                     <use xlink:href='img/svg/sprite.svg#calendar'></use>
                   </svg>
-                  <input type="search" class="administrator__input-search" placeholder="Дата начала выгрузки">
                 </div>
                 <div class="administrator__wpInput wpInput">
+                  <input type="search" name="filter_end_date" class="administrator__input-search"
+                    placeholder="Дата окончания выгрузки">
                   <svg class='icon calendar'>
                     <use xlink:href='img/svg/sprite.svg#calendar'></use>
                   </svg>
-                  <input type="search" class="administrator__input-search" placeholder="Дата окончания выгрузки">
                 </div>
                 <div class="administrator__wpRadio">
                   <div class="administrator__burger-search">
@@ -1095,23 +1096,23 @@
                   <div class="administrator__wpRadio_radios">
                     <div class="administrator__wpRadio_coll">
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio" checked>
+                        <input type="radio" value="2" name="returned" class="administrator__input-radio" checked>
                         <span>Все</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio">
-                        <span>Возвраты</span>
+                        <input type="radio" value="0" name="returned" class="administrator__input-radio">
+                        <span>Платежи</span>
                       </label>
                       <label class="administrator__wpRadio_label">
-                        <input type="radio" name="rad" class="administrator__input-radio">
-                        <span>Платежи</span>
+                        <input type="radio" value="1" name="returned" class="administrator__input-radio">
+                        <span>Возвраты</span>
                       </label>
                     </div>
                   </div>
                 </div>
               </form>
               <div class="content-payments__wpTable">
-                <table class="content-payments__table">
+                <table class="content-payments__table payments-table">
                   <thead class="content-payments__thead">
                     <tr class="content-payments__tr">
                       <th class="content-payments__th">
@@ -1171,73 +1172,7 @@
                     </tr>
                   </thead>
                   <tbody class="content-payments__tbody">
-                    <tr class="content-payments__tr">
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>1</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>2023-08-27</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body fio">
-                          <span>2023-05-18</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>Безнал</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>Продажа</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>9000</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>Киб<br>Елизавета<br>Игоревна</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>1</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>Ф</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <span>Store</span>
-                        </div>
-                      </td>
-                      <td class="content-payments__td">
-                        <div class="content-payments__td-body">
-                          <div class="content-payments__td-content">
-                            <div class="content-payments__td-row">
-                              <button class="content-payments__td-button btn-change-payment button">Изменить
-                                платеж</button>
-                              <button class="content-payments__td-button button-circle button">
-                                <svg class='icon arrow'>
-                                  <use xlink:href='img/svg/sprite.svg#arrow'></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -2187,11 +2122,11 @@
     </div>
   </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231031172840"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231031172840"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20231031172840"></script>
-<script src="assets/libs/simplebar/simplebar.min.js?_v=20231031172840"></script>
-<script src="js/app.min.js?_v=20231031172840"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20231101171651"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231101171651"></script>
+<script src="assets/libs/nouislider/nouislider.min.js?_v=20231101171651"></script>
+<script src="assets/libs/simplebar/simplebar.min.js?_v=20231101171651"></script>
+<script src="js/app.min.js?_v=20231101171651"></script>
 </body>
 
 </html>
